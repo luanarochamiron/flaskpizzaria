@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Global */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+/* index */
+
+.base-header {
+	display: flex;
+	padding: 32px 140px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: orange;
+}
+
+.nav-list {
+	display: flex;
+	list-style: none;
+	gap: 8px;
+}
+
+.nav-list li a {
+	text-decoration: underline;
+	padding: 6px 10px;
+	border-radius: 12px;
+	font-weight: 700;
+}
+
+.main-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100dvh - 103px);
+}
+
+.list-pizzas {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.list-pizzas .pizza {
+	display: flex;
+	flex-direction: column;
+	background-color: orange;
+	padding: 12px;
+	border-radius: 8px;
+	list-style: none;
+}
+
+/* Gestao */
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	background-color: orange;
+	padding: 24px;
+	border-radius: 8px;
+}
+
+.formulario .input {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.formulario .input label {
+	font-weight: 600;
+}
+
+.formulario button {
+	border: none;
+	background-color: #0f0f0f;
+	color: white;
+	border-radius: 8px;
+	padding: 6px;
+	cursor: pointer;
+}

@@ -1,0 +1,25 @@
+{% extends 'index.html' %} {% block conteudo %}
+<form action="/pizza/atualizar" method="POST" class="formulario">
+	<div class="input">
+		<label>Id: </label>
+		<input type="text" name="id" id="id" />
+	</div>
+
+	<div class="input">
+		<label>Nome: </label>
+		<input type="text" name="nome" id="nome" />
+	</div>
+
+	<div class="input">
+		<label>Preço: </label>
+		<input type="number" name="preco" id="preco" />
+	</div>
+
+	<div class="input">
+		<label>Pedaços: </label>
+		<input type="number" name="pedacos" id="pedacos" />
+	</div>
+
+	<button type="submit">Atualizar</button>
+</form>
+{% endblock %}

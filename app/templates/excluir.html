@@ -1,0 +1,10 @@
+{% extends 'index.html' %} {% block conteudo %}
+<form action="/pizza/excluir" method="POST" class="formulario">
+	<div class="input">
+		<label>Id: </label>
+		<input type="text" name="id" id="id" />
+	</div>
+
+	<button type="submit">Excluir</button>
+</form>
+{% endblock %}

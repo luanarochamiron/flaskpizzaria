@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet"
+			href="{{url_for('static',filename='estilo.css')}}"
+		/>
+		<title>{{titulo}}</title>
+	</head>
+	<body>
+		<header class="base-header">
+			<a href="/index">
+				<h1>Dom Patroni</h1>
+			</a>
+
+			<nav>
+				<ul class="nav-list">
+					<li>
+						<a href="/index"> Página Inicial </a>
+					</li>
+					<li>
+						<a href="/cadastro"> Criar pizza </a>
+					</li>
+					<li>
+						<a href="/excluir"> Excluir pizza </a>
+					</li>
+					<li>
+						<a href="/atualizar"> Atualizar pizza </a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="main-content">
+			{% block conteudo %}
+
+			<div>
+				<h1>Pizzas disponiveis</h1>
+
+				{% if pizzas %}
+				<ul class="list-pizzas">
+					{% for key, pizza in pizzas.items() %}
+					<li class="pizza">
+						<div>
+							<strong>Id:</strong>
+							{{ key }}
+						</div>
+
+						<div>
+							<strong>Nome:</strong>
+							{{ pizza.nome }}
+						</div>
+
+						<div>
+							<strong>Preço:</strong>
+							{{ pizza.preco }}
+						</div>
+
+						<div>
+							<strong>Pedaços:</strong>
+							{{ pizza.pedacos }}
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>{{ message }}</p>
+				{% endif %}
+			</div>
+
+			{% endblock %}
+		</div>
+	</body>
+</html>
